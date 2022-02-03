@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 200vh;
+}
+
+section {
+    margin-top: 7vh;
+    padding: 100px;
+    width: 100%;
+    height: 100vh;
+}
+
+.pubg {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.pubg-p {
+    width: 500px;
+    height: 700px;
+    top: 90vh;
+    letter-spacing: 3px;
+    font-size: 1.5vw;
+    margin-top: 35vh;
+}
+
+.pubg-p span {
+    color: red;
+}
+
+img {
+    max-height: 60vh;
+}
+
+.pubg-f {
+    margin: auto;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.pubg-f button {
+    width: 300px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #5b78c7;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    color: #fff;
+}
+
+.pubg-l {
+    margin: auto;
+    font-size: 2vw;
+    color: red;
+}
+
+.mafia {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.mafia img {
+    width: 80%;
+    height: 80%;
+}
+
+.pubg img {
+    width: 80%;
+    height: 80%;
+}
+
+.mafia-p {
+    width: 500px;
+    height: 700px;
+    top: 90vh;
+    letter-spacing: 3px;
+    font-size: 1.3vw;
+    margin-top: 35vh;
+}
+
+.mafia-II-f {
+    margin: auto;
+    width: 50vw;
+    height: 130vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+    margin-top: 16em;
+}
+
+.mafia-II-f button {
+    width: 300px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #5b78c7;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    color: #fff;
+}
+
+.mafia-II-l {
+    margin: auto;
+    font-size: 2vw;
+    color: red;
+}
+
+#lista-materiale {
+    text-align: center;
+    display: none;
+}
+
+#tabel,
+th,
+tr,
+td {
+    border: 2px solid grey;
+}
+
+#tabel {
+    display: none;
+}
+
+th:hover,
+tr:hover,
+td:hover {
+    transform: scale(1.25);
+    border: 3px solid black;
+    transition: 0.6s ease;
+}

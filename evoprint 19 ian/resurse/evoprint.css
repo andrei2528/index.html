@@ -1,0 +1,452 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#menuToggle {
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+    font-family: 'EB Garamond', serif;
+}
+
+#menuToggle a:hover {
+    color: grey;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    height: 35em;
+    padding-top: 125px;
+    background: #ededed;
+    opacity: 0.7;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 40px 0;
+    font-size: 2em;
+    align-self: center;
+    align-items: center;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+#titlu {
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 24%, rgba(147, 147, 147, 0) 48%, rgba(2, 0, 36, 1) 81%);
+    background-size: cover;
+    color: #333;
+    padding: 150px;
+}
+
+#rosu {
+    color: red;
+}
+
+#titlu h1 {
+    font-size: 7em;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+#titlu h1 {
+    animation-name: font-size;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    text-align: center;
+}
+
+@keyframes font-size {
+    from {
+        font-size: 0.5em
+    }
+    to {
+        font-size: 7em;
+    }
+}
+
+#titlu h2 {
+    animation-name: font-size;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+
+@keyframes font-size {
+    from {
+        font-size: 0.5em
+    }
+    to {
+        font-size: 3.5em;
+    }
+}
+
+#titlu h2 {
+    font-size: 3.5em;
+    color: white;
+    background-color: black;
+}
+
+#titlu h1 h2:hover {
+    opacity: 50%;
+}
+
+#cards {
+    display: flex;
+    align-items: stretch;
+    max-width: 11.5em;
+}
+
+#linie {
+    background-color: #4E5B61;
+    height: 6px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#litere:hover #linie,
+#servicii-printare:hover #linie,
+#sublimare:hover #linie,
+#cutter-plotting:hover #linie,
+#design-grafic:hover #linie,
+#carti-de-vizita:hover #linie,
+#cadouri:hover #linie,
+#firme-luminoase:hover #linie {
+    animation-name: slideright;
+    animation-duration: 4s;
+}
+
+@keyframes slideright {
+    from {
+        margin-left: 0;
+        width: 0%;
+    }
+    to {
+        margin-right: 100px;
+        width: 100%;
+    }
+}
+
+#modelare3d,
+#gravare,
+#litere,
+#servicii-printare,
+#sublimare,
+#cutter-plotting,
+#design-grafic,
+#carti-de-vizita,
+#cadouri,
+#firme-luminoase {
+    margin: 80px;
+    border: 5px solid #575352;
+    box-shadow: 60px -16px #403D3D;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+#cards h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #4E5B61;
+}
+
+#litere:hover,
+#modelare3d:hover,
+#gravare:hover,
+#servicii-printare:hover,
+#sublimare:hover,
+#cutter-plotting:hover,
+#design-grafic:hover,
+#carti-de-vizita:hover,
+#cadouri:hover,
+#firme-luminoase:hover {
+    transform: translateX(-10px);
+    transform: translateY(35px);
+}
+
+#modelare3d h2 {
+    background-image: url("https://evoprint3d.files.wordpress.com/2021/04/maxresdefault-1.jpg?w=1024");
+    background-size: cover;
+    padding-top: 3.5em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    padding-bottom: 6em;
+}
+
+#gravare h2 {
+    background-image: url("https://evoprint3d.files.wordpress.com/2021/04/123-1.jpg?w=1024");
+    background-size: cover;
+    padding: 3.5em 3.5em 5em 3.5em;
+}
+
+#litere h2 {
+    background-image: url("https://evoprint3d.files.wordpress.com/2021/04/litere-polistiren-site.jpg?w=1024");
+    background-size: cover;
+    padding-top: 3.5em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    padding-bottom: 6em;
+}
+
+#linie {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#servicii-printare h2 {
+    background-image: url('https://evoprint3d.files.wordpress.com/2021/04/print-1.jpg?w=768');
+    background-size: cover;
+    padding-top: 3.5em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    padding-bottom: 6em;
+}
+
+#sublimare h2 {
+    background-image: url('https://evoprint3d.files.wordpress.com/2021/04/sublimare-poza.jpg?w=1024');
+    background-size: cover;
+    padding-top: 3.5em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    padding-bottom: 8.5em;
+}
+
+#cutter-plotting h2 {
+    background-image: url('https://evoprint3d.files.wordpress.com/2021/04/cutter-plotter.jpg?w=819');
+    background-size: cover;
+    padding-top: 3.5em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    padding-bottom: 7em;
+}
+
+#design-grafic h2 {
+    background-image: url('https://evoprint3d.files.wordpress.com/2021/04/grafica.jpg?w=1024');
+    background-size: cover;
+    padding-top: 3.5em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    padding-bottom: 6em;
+}
+
+#carti-de-vizita h2 {
+    background-image: url('https://evoprint3d.files.wordpress.com/2021/04/carti-vizita-1.jpg?w=1024');
+    background-size: cover;
+    padding-top: 3.5em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    padding-bottom: 5em;
+}
+
+#cadouri h2 {
+    background-image: url('https://evoprint3d.files.wordpress.com/2021/04/untitled-1-4.jpg?w=1024');
+    background-size: cover;
+    padding-top: 3.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 7.5em;
+    max-width: 11.5em;
+}
+
+#firme-luminoase h2 {
+    background-image: url('https://evoprint3d.files.wordpress.com/2021/04/volumetrie-1.jpg?w=1024');
+    background-size: cover;
+    padding-top: 3.5em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-bottom: 7.5em;
+}
+
+#cards p {
+    font-family: 'Chakra Petch', sans-serif;
+    margin-bottom: 10px;
+}
+
+#modelare3d button {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#gravare button {
+    margin-top: 70px;
+    margin-bottom: 10px
+}
+
+#litere button {
+    margin-top: 80px;
+    margin-bottom: 10px
+}
+
+#servicii-printare button {
+    margin-top: 60px;
+    margin-bottom: 10px
+}
+
+#sublimare button {
+    margin-top: 100px;
+    margin-bottom: 10px
+}
+
+#cutter-plotting button {
+    margin-top: 130px;
+    margin-bottom: 10px
+}
+
+#design-grafic button {
+    margin-top: 100px;
+    margin-bottom: 10px
+}
+
+#carti-de-vizita button {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+#cadouri button {
+    margin-top: 70px;
+    margin-bottom: 10px
+}
+
+#firme-luminoase button {
+    margin-top: 90px;
+    margin-bottom: 10px
+}
+
+#afla-mai-multe {
+    background-color: #4E5B61;
+    height: 4em;
+    width: 9em;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: white;
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+
+#afla-mai-multe:hover {
+    background-color: white;
+    color: #4E5B61;
+    box-shadow: 2px 2px #4E5B61, 2px 2px #4E5B61, 2px 2px #4E5B61;
+    transition-duration: 0.6s;
+    height: 5em;
+    width: 10em;
+}
+
+#slide {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+#cercuri-slide button {
+    display: flex;
+}
+
+#cerc1,
+#cerc2,
+#cerc3,
+#cerc4,
+#cerc5,
+#cerc6,
+#cerc7,
+#cerc8,
+#cerc9,
+#cerc10 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-right: 5px;
+    background-color: white;
+    border: 3px solid #4E5B61;
+}
+
+#cerc1:active,
+#cerc2:active,
+#cerc3:active,
+#cerc4:active,
+#cerc5:active,
+#cerc6:active,
+#cerc7:active,
+#cerc8:active,
+#cerc9:active,
+#cerc10:active {
+    border: 2px solid white;
+    background-color: #4E5B61;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: ease 0.4s;
+}
